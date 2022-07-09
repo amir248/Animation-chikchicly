@@ -1,0 +1,193 @@
+h1{
+    animation:line 5s infinite linear;
+}
+
+@keyframes line{
+    from{
+        color:red;
+        font-size: 30px;
+    }
+    50%{
+        color:cyan;
+        font-size: 10px;
+    }
+    70%{
+        font-size: 10px;;
+    }
+    80%{
+        font-size: 30px;
+    }
+    to{
+        color:red;
+        font-size: 30px;
+    }
+    from{
+        margin-left:100px;
+
+    }
+    50%{
+        margin-right:100px;
+    }
+    to{
+        margin:0;
+    }
+}
+
+.clock{
+    width:200px;
+    height:200px;
+    margin:auto;
+    border-radius: 50%;
+    background: lightgreen;
+    position:relative;
+}
+
+.min-arrow{
+    width:3px;
+    height:90px;
+    background: violet;
+    position:absolute;
+    left:99px;
+    top:10px;
+    animation:moveMin 60s infinite steps(60);
+    transform-origin:50% 100%;
+    box-shadow:0 15px 0 rgb(255, 187, 255);
+
+}
+.hours-arrow{
+    width:3px;
+    height:90px;
+    background: darkgreen;
+    position:absolute;
+    left:99px;
+    top:10px;
+    animation:moveHours 360s infinite linear;
+    transform-origin:50% 100%;
+    box-shadow:0 15px 0 rgb(89, 194, 40);
+}
+
+@keyframes moveHours{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes moveMin{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.seconds-arrow{
+    width:3px;
+    height:90px;
+    background: red;
+    position:absolute;
+    left:99px;
+    top:10px;
+    animation:moveSeconds 1s infinite linear;
+    transform-origin:50% 100%;
+    box-shadow:0 15px 0 rgb(194, 84, 40);
+}
+@keyframes moveSeconds{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+.min-arrow:before{
+    content:'';
+    display:block;
+    width:7px;
+    height:7px;
+    border-radius: 50%;
+    background: violet;
+    position:absolute;
+    left:-2px;
+    bottom:-5px;
+    box-shadow:0px -45px 0 9px lightgreen,0px -45px 0 10px violet;
+}
+body{
+    height:100vh;
+    margin:0;
+    background:url('pic/cityM.png') repeat-x left bottom,#cff url('pic/siluet.png') repeat-x left bottom;
+    animation:moveCity 5s infinite linear;
+}
+
+@keyframes moveCity{
+    from{
+        background-position-x:0;
+        
+    }
+  
+    to{
+        background-position-x:1189px;
+        
+    }
+}
+
+
+ /* циферблат */
+header .clock ul li{
+    /* background:red; */
+    width:30px;
+    position: relative;
+    list-style-type: none;
+    text-shadow:1px 1px white;
+}
+header .clock ul li:nth-of-type(1){
+    left:45px;
+}
+header .clock ul li:nth-of-type(7){
+    left:55px;
+    top:75px;
+}
+header .clock ul li:nth-of-type(4){
+    left:135px;
+    top:50px;
+}
+header .clock ul li:nth-of-type(10){
+    right:35px;
+    bottom:59px;
+}
+header .clock ul li:nth-of-type(2){
+    left:95px;
+    top:0px;
+}
+header .clock ul li:nth-of-type(3){
+    left:130px;
+    top:20px;
+}
+header .clock ul li:nth-of-type(5){
+    left:120px;
+    top:70px;
+}
+header .clock ul li:nth-of-type(6){
+    left:100px;
+    top:77px;
+}
+header .clock ul li:nth-of-type(8){
+    left:10px;
+    top:50px;
+}
+header .clock ul li:nth-of-type(9){
+    right:20px;
+    top:0px;
+}
+header .clock ul li:nth-of-type(11){
+    right:27px;
+    bottom:120px;
+}
+header .clock ul li:nth-of-type(12){
+    right:3px;
+    bottom:180px;
+}
